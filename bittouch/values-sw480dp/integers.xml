@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="trade_list_history_column_one">30</integer>
+    <integer name="trade_list_history_column_two">20</integer>
+    <integer name="trade_list_history_column_three">20</integer>
+    <integer name="trade_list_history_column_four">30</integer>
+
+    <integer name="trade_list_interest_column_one">30</integer>
+    <integer name="trade_list_interest_column_two">20</integer>
+    <integer name="trade_list_interest_column_three">20</integer>
+    <integer name="trade_list_interest_column_four">30</integer>
+
+    <integer name="trade_list_order_column_one">30</integer>
+    <integer name="trade_list_order_column_two">20</integer>
+    <integer name="trade_list_order_column_three">20</integer>
+    <integer name="trade_list_order_column_four">30</integer>
+
+    <integer name="trade_list_summary_column_one">30</integer>
+    <integer name="trade_list_summary_column_two">20</integer>
+    <integer name="trade_list_summary_column_three">20</integer>
+    <integer name="trade_list_summary_column_four">30</integer>
+
+    <integer name="item_list_pair_one">6</integer>
+    <integer name="item_list_pair_two">22</integer>
+</resources>

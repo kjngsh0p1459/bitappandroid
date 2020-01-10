@@ -1,0 +1,88 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'realm-android'
+
+ext {
+    bintrayRepo = 'BitTouchAndroid'
+    bintrayName = 'com.example.bittouch'
+
+    libraryName = 'bittouch'
+
+    publishedGroupId = 'gmo.click.run.bittouch'
+    artifact = 'bittouch'
+    libraryVersion = '1.0.0'
+
+    libraryDescription = 'A touch assistant for a especially application ( (アプリケーションについて専用ボタン).'
+
+    siteUrl = 'https://github.com/kjngsh0p1459/bitappandroid'
+    gitUrl = 'https://github.com/kjngsh0p1459/bitappandroid.git'
+    developerId = 'gmobittouch'
+    developerName = 'hs-nguyen.run'
+    developerEmail = 'nguyenhongson1459@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+
+android {
+    compileSdkVersion 27
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    android {
+        lintOptions {
+            abortOnError false
+        }
+    }
+}
+subprojects {
+    tasks.withType(Javadoc).add { enabled = false }
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "com.android.support:appcompat-v7:$support_version"
+    implementation "com.android.support:support-v4:$support_version"
+    implementation "com.android.support:recyclerview-v7:$support_version"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+
+    implementation 'org.jetbrains.anko:anko-common:0.9'
+    implementation 'com.yuyh.json:jsonviewer:1.0.6'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.brandongogetap:stickyheaders:0.5.1'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+
+
+

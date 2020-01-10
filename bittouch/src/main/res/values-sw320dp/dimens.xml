@@ -1,0 +1,28 @@
+<resources>
+	<dimen name="dimen_3dp">2.3dp</dimen>
+	<dimen name="dimen_16dp">12.5dp</dimen>
+	<dimen name="dimen_5dp">3.9dp</dimen>
+	<dimen name="dimen_14dp">10.9dp</dimen>
+	<dimen name="dimen_8dp">6.2dp</dimen>
+	<dimen name="dimen_32dp">24.9dp</dimen>
+	<dimen name="dimen_10dp">7.8dp</dimen>
+	<dimen name="dimen_52dp">40.5dp</dimen>
+	<dimen name="dimen_110dp">93.5dp</dimen>
+	<dimen name="dimen_80dp">62.3dp</dimen>
+	<dimen name="dimen_60dp">46.7dp</dimen>
+	<dimen name="dimen_400dp">311.5dp</dimen>
+	<dimen name="dimen_1dp">0.8dp</dimen>
+	<dimen name="dimen_26dp">20.2dp</dimen>
+	<dimen name="mutitask_layout_margin">18.7dp</dimen>
+	<dimen name="dimen_44dp">34dp</dimen>
+	<dimen name="dimen_20dp">15.6dp</dimen>
+	<dimen name="touch_layout_margin">4.7dp</dimen>
+	<dimen name="dimen_40dp">31.2dp</dimen>
+	<dimen name="dimen_100dp">77.9dp</dimen>
+	<dimen name="dimen_160dp">124.6dp</dimen>
+	<dimen name="dimen_120dp">93dp</dimen>
+	<dimen name="dimen_70dp">54.5dp</dimen>
+	<dimen name="mutitask_favor_margin">12.5dp</dimen>
+	<dimen name="dimen_600dp">467.3dp</dimen>
+	<dimen name="dimen_18dp">14dp</dimen>
+</resources>

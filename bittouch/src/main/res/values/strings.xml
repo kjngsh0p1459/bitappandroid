@@ -1,0 +1,7 @@
+<resources>
+    <string name="version_app_describe">Version app:\t</string>
+    <string name="hint">Alert</string>
+    <string name="hint_content_window">Permission Not Found</string>
+    <string name="ok">ok</string>
+    <string name="cancel">cancel</string>
+</resources>

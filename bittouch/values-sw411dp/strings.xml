@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scaleY_ratingbar">0.9</string>
+    <string name="scale_checkbox_login">1.1</string>
+</resources>

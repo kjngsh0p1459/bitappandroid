@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/ctlTable"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/colorWhite"
+	android:padding="@dimen/dimen_10dp">
+
+	<ImageView
+		android:id="@+id/btnBack"
+		android:layout_width="@dimen/dimen_60dp"
+		android:layout_height="@dimen/dimen_60dp"
+		android:src="@drawable/button_back"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<android.support.constraint.ConstraintLayout
+		android:id="@+id/srlHeader"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/dimen_44dp"
+		android:orientation="horizontal"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/btnBack">
+
+		<LinearLayout
+			android:id="@+id/llFreeze"
+			android:layout_width="@dimen/dimen_120dp"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toLeftOf="@id/hsvcHeader"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<com.example.bittouch.view.component.HorizontalScrollViewTable
+			android:id="@+id/hsvcHeader"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:overScrollMode="never"
+			android:requiresFadingEdge="horizontal"
+			android:scrollbars="none"
+			app:layout_constraintLeft_toRightOf="@id/llFreeze"
+			app:layout_constraintTop_toTopOf="parent">
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent">
+
+				<com.example.bittouch.view.component.RecycleViewTable
+					android:id="@+id/rvHeader"
+					android:layout_width="wrap_content"
+					android:layout_height="@dimen/dimen_44dp" />
+			</LinearLayout>
+
+		</com.example.bittouch.view.component.HorizontalScrollViewTable>
+
+	</android.support.constraint.ConstraintLayout>
+
+	<com.example.bittouch.view.component.SwipeToRefreshTable
+		android:id="@+id/mSwipeRefreshLayout"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/srlHeader">
+
+		<android.support.constraint.ConstraintLayout
+			android:id="@+id/clMain"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<com.example.bittouch.view.component.HorizontalScrollViewTable
+				android:id="@+id/chsvMain"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:overScrollMode="never"
+				android:requiresFadingEdge="horizontal"
+				android:scrollbarFadeDuration="0"
+				android:scrollbars="none"
+				app:layout_constraintLeft_toRightOf="@id/rvContent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintWidth_default="wrap">
+
+				<LinearLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content">
+
+					<com.example.bittouch.view.component.RecycleViewTable
+						android:id="@+id/rvDetail"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" />
+				</LinearLayout>
+
+			</com.example.bittouch.view.component.HorizontalScrollViewTable>
+
+
+			<com.example.bittouch.view.component.RecycleViewTable
+				android:id="@+id/rvContent"
+				android:layout_width="@dimen/dimen_120dp"
+				android:layout_height="0dp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintLeft_toLeftOf="parent"
+				app:layout_constraintRight_toLeftOf="@id/chsvMain"
+				app:layout_constraintTop_toTopOf="parent" />
+
+		</android.support.constraint.ConstraintLayout>
+
+	</com.example.bittouch.view.component.SwipeToRefreshTable>
+
+</android.support.constraint.ConstraintLayout>
